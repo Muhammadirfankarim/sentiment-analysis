@@ -1,6 +1,11 @@
 import streamlit as st
 import joblib
-
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import LinearSVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
 # Pilihan model yang tersedia
 MODEL_FILES = {
     "Logistic Regression": "model_logreg_sentimen.joblib",
